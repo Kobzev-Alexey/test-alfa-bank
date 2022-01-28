@@ -31,14 +31,14 @@ export const Main = () => {
         </div>
       </nav>
       <div className="d-flex row justify-content-between  " >
-        {filteredNews.map(({ author, urlToImage, content, id, like }) =>
+        {/* {filteredNews.map(({ author, urlToImage, content, id, like }) =>
           <InfoCard author={author}
             urlToImage={urlToImage}
             content={content} key={id}
             like={like}
             doLike={() => clickHandlerHeart(id)}
             deletNews={() => deleteHandlerNews(id)}
-          />)}
+          />)} */}
       </div>
     </div>
   );
