@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/test-alfa-bank/static/css/main.964fdded.css",
+    "main.js": "/test-alfa-bank/static/js/main.2a64a072.js",
+    "index.html": "/test-alfa-bank/index.html",
+    "main.964fdded.css.map": "/test-alfa-bank/static/css/main.964fdded.css.map",
+    "main.2a64a072.js.map": "/test-alfa-bank/static/js/main.2a64a072.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.2a64a072.js"
+  ]
+}
