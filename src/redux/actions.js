@@ -12,6 +12,7 @@ export const dataAllThunk = () => async (dispatch) => {
   );
   const data = await res.json();
   const news = data.articles;
+  console.log("111",news)
   const newsWithId = news.map((el) => {
    return {...el, id: nanoid(), like: false}
   })
