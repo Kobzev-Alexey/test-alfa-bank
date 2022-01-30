@@ -7,8 +7,8 @@ export const deleteNewsAC = (id) => ({type: actionTypes.DELET_NEWS, payload: {id
 
 export const dataAllThunk = () => async (dispatch) => {
   const res = await fetch(
-    // "https://newsapi.org/v2/everything?q=apple&from=2022-01-25&to=2022-01-25&sortBy=popularity&apiKey=8a413d3362304ebaaa6903c7c0411051"
-    "https://inshortsapi.vercel.app/news?category=science"
+    "https://newsapi.org/v2/everything?q=apple&from=2022-01-25&to=2022-01-25&sortBy=popularity&apiKey=8a413d3362304ebaaa6903c7c0411051"
+    // "https://inshortsapi.vercel.app/news?category=science"
   );
   const data = await res.json();
   const news = data.articles;
@@ -16,4 +16,5 @@ export const dataAllThunk = () => async (dispatch) => {
    return {...el, id: nanoid(), like: false}
   })
   dispatch(newsDataAC(newsWithId));
+  console.log("data",data)
 };

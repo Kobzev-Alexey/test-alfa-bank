@@ -6,8 +6,8 @@ import { clickHeartAC, dataAllThunk, deleteNewsAC } from "../redux/actions";
 export const Main = () => {
   const dispatch = useDispatch();
   const newsData = useSelector((store) => store.news);
-  const [isShowLiked, setIsShowLiked] = useState(false)
-  const filteredNews = isShowLiked ? newsData.filter((el) => el.like) : newsData
+  // const [isShowLiked, setIsShowLiked] = useState(false)
+  // const filteredNews = isShowLiked ? newsData.filter((el) => el.like) : newsData
   
   useEffect(() => {
     dispatch(dataAllThunk());
@@ -31,14 +31,14 @@ export const Main = () => {
         </div>
       </nav>
       <div className="d-flex row justify-content-between  " >
-        {/* {filteredNews.map(({ author, urlToImage, content, id, like }) =>
+        {newsData.map(({ author, urlToImage, content, id, like }) =>
           <InfoCard author={author}
             urlToImage={urlToImage}
             content={content} key={id}
             like={like}
             doLike={() => clickHandlerHeart(id)}
             deletNews={() => deleteHandlerNews(id)}
-          />)} */}
+          />)}
       </div>
     </div>
   );
